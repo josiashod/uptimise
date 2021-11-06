@@ -1,0 +1,46 @@
+{
+  "name": "uptimiste",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^5.10.1",
+    "@fullcalendar/daygrid": "^5.10.1",
+    "@fullcalendar/interaction": "^5.10.1",
+    "@fullcalendar/react": "^5.10.1",
+    "@fullcalendar/timegrid": "^5.10.1",
+    "@tailwindcss/typography": "^0.4.1",
+    "daisyui": "^1.14.2",
+    "date-fns": "^2.25.0",
+    "dates-generator": "^1.0.4",
+    "install": "^0.13.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.0",
+    "react-big-calendar": "^0.36.1",
+    "react-calendar": "^3.5.0",
+    "react-dom": "^17.0.0",
+    "react-hook-form": "^7.18.1",
+    "react-router-dom": "^5.3.0",
+    "tailwind-scrollbar-hide": "^1.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/react": "^6.3.12",
+    "@vitejs/plugin-react": "^1.0.0",
+    "@windicss/plugin-animations": "^1.0.9",
+    "autoprefixer": "^10.3.7",
+    "babel-loader": "^8.2.3",
+    "postcss": "^8.3.9",
+    "tailwindcss": "^2.2.16",
+    "vite": "^2.6.4"
+  }
+}
