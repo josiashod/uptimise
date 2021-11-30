@@ -16,7 +16,7 @@ import Badge from "../../components/Badge";
 function AbsencesValide({}) {
   return (
     <>
-      <div className='flex items-center mb-3 justify-between space-x-2'>
+      <div className='flex items-center my-3 mx-4 justify-between space-x-2'>
         <div className='flex items-center space-x-2 '>
           <h2 className='text-lg text-gray-900 font-semibold'>Congés payés</h2>
           <Badge status='refused' />

@@ -66,7 +66,7 @@ function Valide() {
             {/* Left Side  */}
             <div className='col-span-5 w-full mt-4'>
               {/* Title  */}
-              <div className='flex items-center mb-3 justify-between space-x-2'>
+              <div className='flex items-center my-3 mx-4 justify-between space-x-2'>
                 <div className='flex items-center space-x-2 '>
                   <h2 className='text-lg text-gray-900 font-semibold'>
                     Essence

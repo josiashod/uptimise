@@ -1,76 +1,88 @@
 import React from "react";
 import SideBar from "../../components/sidebar/SideBar";
-import Arrow from "../../components/icons/Arrow";
-import Button from "../../components/Button";
 import Search from "../../components/icons/Search";
-import Pending from "../../components/icons/Pending";
-import MiArrow from "../../components/icons/MiArrow";
-import Success from "../../components/icons/Success";
 import Notification from "../../components/icons/Notification";
 import SplitBox from "../../components/SplitBox/SplitBox";
-import Add from "../../components/icons/Add";
 import Input from "../../components/Input";
-import { Link } from "react-router-dom";
+import SearchBarWithSelectBox from "../../components/SearchBarWithSelectBox";
+
 import SplitBoxItems from "../../components/SplitBox/SplitBoxItems";
-import AbsencesEnAttentes from "./AbsencesEnAttentes";
+import AfficherValidation from "./AfficherValidation";
 
 const FAKE_DATA = [
   {
     id: 1,
     headText: "Congé payé",
-    headValue: "3 jours",
-    bodyText: "Essence",
+    name: "Eric Bertrant",
+    image: "http://daisyui.com/tailwind-css-component-profile-1@94w.png",
     date: "01 Avril 1960",
     status: "pending",
   },
   {
     id: 2,
     headText: "Congé payé ",
-    headValue: "3 jours",
-    bodyText: "Petit dejeuner",
+    name: "Eric Bertrant",
+    image: "http://daisyui.com/tailwind-css-component-profile-1@94w.png",
     date: "01 Avril 1960",
     status: "pending",
   },
   {
     id: 3,
     headText: "Congé payé",
-    headValue: "3 jours",
-    bodyText: "Essence",
+    name: "Eric Bertrant",
+    image: "http://daisyui.com/tailwind-css-component-profile-1@94w.png",
     date: "01 Avril 1960",
     status: "validated",
   },
   {
     id: 4,
     headText: "Congé payé ",
-    headValue: "3 jours",
-    bodyText: "Petit dejeuner",
+    name: "Eric Bertrant",
+    image: "http://daisyui.com/tailwind-css-component-profile-1@94w.png",
     date: "01 Avril 1960",
     status: "validated",
   },
   {
     id: 5,
     headText: "Congé payé",
-    headValue: "3 jours",
-    bodyText: "Essence",
+    name: "Eric Bertrant",
+    image: "http://daisyui.com/tailwind-css-component-profile-1@94w.png",
     date: "01 Avril 1960",
     status: "refused",
   },
   {
     id: 6,
     headText: "Congé payé ",
-    headValue: "3 jours",
-    bodyText: "Petit dejeuner",
+    name: "Eric Bertrant",
+    image: "http://daisyui.com/tailwind-css-component-profile-1@94w.png",
     date: "01 Avril 1960",
     status: "refused",
   },
 ];
 
-function Absences() {
+const DONNEES = [
+  {
+    id: "H3",
+    name: "type 1",
+  },
+  {
+    id: "H4",
+    name: "type 2",
+  },
+  {
+    id: "H5",
+    name: "type 3",
+  },
+];
+
+function Validations() {
   const [selectPlitBox, setSelectSplitBox] = React.useState(null);
 
-  React.useEffect(() => {}, [selectPlitBox]);
-  console.log("Re-render all items");
-  console.log(selectPlitBox);
+  React.useEffect(() => {
+    // console.log(selectPlitBox)
+  }, [selectPlitBox]);
+    // console.log("Re-render all items");
+    // console.log(selectPlitBox);
   return (
     <main className='bg-custom-light h-screen text-gray-700 font-main  relative'>
       <div className='flex items-start justify-between'>
@@ -94,31 +106,16 @@ function Absences() {
           </div>
           <div className='flex justify-between mb-2'>
             <h2 className='text-2xl font-bold text-gray-900'>
-              Mes congés et Absences
+              Validations
             </h2>
-            <div>
-              <div className='flex items-center gap-x-2'>
-                <h2 className='text-2xl text-custom-d font-semibold'>25,24</h2>
-                <span className='text-lg font-light text-gray-500'>solde</span>
-                <Arrow className='w-4 h-4 stroke-current text-custom-d mr-4' />
-                <Link to='/absences/demande-absence'>
-                  <Button icon={Add} label='Demande d’absence' />
-                </Link>
-              </div>
-            </div>
           </div>
           {/* Content  */}
           <div className='w-full h-full bg-white grid grid-cols-7 '>
             {/* Right Side  */}
             <div className='col-span-2'>
               {/* Search Bar  */}
-              <div className='mx-4 mb-3'>
-                <Input
-                  className='mx-6 mt-4'
-                  icon={Search}
-                  iconPosition='left'
-                  placeholder='Rechercher un bulletins ...'
-                />
+              <div className='mx-4 mt-2'>
+                <SearchBarWithSelectBox name="type"/>
               </div>
 
               <div>
@@ -129,7 +126,8 @@ function Absences() {
                   renderItem={({
                     id,
                     headText,
-                    headValue,
+                    name,
+                    image,
                     bodyText,
                     date,
                     status,
@@ -139,9 +137,10 @@ function Absences() {
                       id={id}
                       active={selectPlitBox ? selectPlitBox.id : null}
                       setSelectSplitBox={setSelectSplitBox}
-                      componentTitle='Absences'
+                      componentTitle='Validations'
                       headText={headText}
-                      headValue={headValue}
+                      person={name}
+                      image={image}
                       bodyText={bodyText}
                       date={date}
                       status={status}
@@ -155,7 +154,8 @@ function Absences() {
                   renderItem={({
                     id,
                     headText,
-                    headValue,
+                    name,
+                    image,
                     bodyText,
                     date,
                     status,
@@ -165,9 +165,10 @@ function Absences() {
                       id={id}
                       active={selectPlitBox ? selectPlitBox.id : null}
                       setSelectSplitBox={setSelectSplitBox}
-                      componentTitle='Absences'
+                      componentTitle='Validations'
                       headText={headText}
-                      headValue={headValue}
+                      person={name}
+                      image={image}
                       bodyText={bodyText}
                       date={date}
                       status={status}
@@ -181,7 +182,8 @@ function Absences() {
                   renderItem={({
                     id,
                     headText,
-                    headValue,
+                    name,
+                    image,
                     bodyText,
                     date,
                     status,
@@ -191,9 +193,10 @@ function Absences() {
                       id={id}
                       active={selectPlitBox ? selectPlitBox.id : null}
                       setSelectSplitBox={setSelectSplitBox}
-                      componentTitle='Absences'
+                      componentTitle='Validations'
                       headText={headText}
-                      headValue={headValue}
+                      person={name}
+                      image={image}
                       bodyText={bodyText}
                       date={date}
                       status={status}
@@ -206,7 +209,8 @@ function Absences() {
             {/* Left Side  */}
             <div className='col-span-5 w-full'>
               {selectPlitBox?.status && (
-                <AbsencesEnAttentes status={selectPlitBox?.status} />
+                <AfficherValidation status={selectPlitBox?.status} person={selectPlitBox.person} image={selectPlitBox.image} />
+                // {selectPlitBox}
               )}
             </div>
           </div>
@@ -216,4 +220,4 @@ function Absences() {
   );
 }
 
-export default Absences;
+export default Validations;

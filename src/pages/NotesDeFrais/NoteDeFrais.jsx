@@ -108,7 +108,7 @@ function NoteDeFrais() {
             {/* Right Side  */}
             <div className='col-span-2'>
               {/* Search Bar  */}
-              <div className='flex items-center lg:mx-4 mx-8 mb-5 rounded-md bg-gray-100 border-custom-l3 border-2'>
+              <div className='flex items-center lg:mx-4 mx-8 my-3 rounded-md bg-gray-100 border-custom-l3 border-2'>
                 <Search className='w-6 ml-2' />
                 <input
                   type='text'
@@ -122,6 +122,7 @@ function NoteDeFrais() {
                   datas={FAKE_DATA}
                   status='pending'
                   renderItem={({
+                    id,
                     headText,
                     headValue,
                     bodyText,
@@ -129,6 +130,9 @@ function NoteDeFrais() {
                     status,
                   }) => (
                     <SplitBoxItems
+                      key={id}
+                      id={id}
+                      active={selectPlitBox ? selectPlitBox.id : null}
                       setSelectSplitBox={setSelectSplitBox}
                       componentTitle='NoteDeFrais'
                       headText={headText}
@@ -144,6 +148,7 @@ function NoteDeFrais() {
                   datas={FAKE_DATA}
                   status='validated'
                   renderItem={({
+                    id,
                     headText,
                     headValue,
                     bodyText,
@@ -151,6 +156,9 @@ function NoteDeFrais() {
                     status,
                   }) => (
                     <SplitBoxItems
+                      key={id}
+                      id={id}
+                      active={selectPlitBox ? selectPlitBox.id : null}
                       setSelectSplitBox={setSelectSplitBox}
                       componentTitle='NoteDeFrais'
                       headText={headText}
@@ -176,6 +184,7 @@ function NoteDeFrais() {
                     <SplitBoxItems
                       key={id}
                       id={id}
+                      active={selectPlitBox ? selectPlitBox.id : null}
                       setSelectSplitBox={setSelectSplitBox}
                       componentTitle='NoteDeFrais'
                       headText={headText}

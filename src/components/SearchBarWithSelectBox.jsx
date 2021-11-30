@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import Search from "./icons/Search";
 
-function SearchBarWithSelectBox() {
+function SearchBarWithSelectBox({ name }) {
   return (
-    <div className={"form-control w-[28em]"}>
+    <div className={"form-control w-[20em]"}>
       <div className='flex items-centers  rounded-md bg-gray-50 border-custom-l3 focus-within:ring-custom-l2 focus-within:ring-2 border-2'>
-        <select className='ml-2' name='' id=''>
-          <option>En cours</option>
+        <select className='ml-2 bg-transparent focus:outline-none' name='' id=''>
+          <option disabled value={null}>{name ? name : "En cours"}</option>
           <option>Option 1</option>
           <option>Option 2</option>
         </select>

@@ -1,9 +1,12 @@
 import React from "react";
 
 function FeuilleDeTemps() {
+
   returns(
     <table className='table w-full'>
+
       <thead className='!bg-custom-l3 z-50'>
+
         <tr className=''>
           <th className='!bg-transparent !normal-case !font-medium'>Ref</th>
           <th className='!bg-transparent !normal-case !font-medium'>
@@ -22,8 +25,11 @@ function FeuilleDeTemps() {
             Jour restants ( jr)
           </th>
         </tr>
+
       </thead>
+
       <tbody className=''>
+
         <tr className=''>
           <td className='!border-r-2 !border-b-0 !border-gray-300'>RT128F</td>
           <td className='!border-r-2 !border-b-0 !border-gray-300'>
@@ -36,6 +42,7 @@ function FeuilleDeTemps() {
           <td className='!border-r-2 !border-b-0 !border-gray-300'>4.5</td>
           <td>3.5</td>
         </tr>
+
         <tr className=''>
           <td className='!border-r-2 !border-b-0 !border-gray-300'>RT128F</td>
           <td className='!border-r-2 !border-b-0 !border-gray-300'>
@@ -48,6 +55,7 @@ function FeuilleDeTemps() {
           <td className='!border-r-2 !border-b-0 !border-gray-300'>4.5</td>
           <td>3.5</td>
         </tr>
+
         <tr className=''>
           <td className='!border-r-2 !border-b-0 !border-gray-300'>RT128F</td>
           <td className='!border-r-2 !border-b-0 !border-gray-300'>
@@ -60,6 +68,7 @@ function FeuilleDeTemps() {
           <td className='!border-r-2 !border-b-0 !border-gray-300'>4.5</td>
           <td>3.5</td>
         </tr>
+
         <tr className=''>
           <td className='!border-r-2 !border-b-0 !border-gray-300'>RT128F</td>
           <td className='!border-r-2 !border-b-0 !border-gray-300'>
@@ -72,7 +81,9 @@ function FeuilleDeTemps() {
           <td className='!border-r-2 !border-b-0 !border-gray-300'>4.5</td>
           <td>3.5</td>
         </tr>
+        
       </tbody>
+
     </table>
   );
 }

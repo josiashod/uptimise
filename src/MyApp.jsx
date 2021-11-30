@@ -7,10 +7,13 @@ import interactionPlugin from "@fullcalendar/interaction";
 import frLocale from "@fullcalendar/core/locales/fr";
 
 function MyApp() {
+
   const [value, onChange] = useState(new Date());
 
   return (
+
     <div className='w-[800px]'>
+
       <FullCalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         selectable
@@ -38,7 +41,9 @@ function MyApp() {
         allDaySlot={false}
         weekText='text'
       />
+      
     </div>
+
   );
 }
 export default MyApp;

@@ -28,7 +28,7 @@ function SplitBox({
         onClick={handleClick}
         className='flex items-center bg-custom-l3 pl-4 py-1 space-x-2 cursor-pointer'>
         <MiArrow />
-        <h2 className='w-full  text-sm 2xl:text-lg  text-gray-900 font-medium'>
+        <h2 className='w-full text-sm 2xl:text-lg  text-gray-900 font-medium'>
           {title}
         </h2>
       </span>
